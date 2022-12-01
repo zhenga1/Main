@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "986f3a2ae0af1f27",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a616f718732a642",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "STAR/GM3.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ce2e4f4ff5a46104",
+    "type": "split",
+    "children": [
+      {
+        "id": "4323617a9755f742",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c609e9f4e86c374",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "7522a0e85ccf0645",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "oppor",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "423aa5103b1a55e8",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 282.5007801055908
+  },
+  "right": {
+    "id": "76421f41100ceaad",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1f8c587af2a1d7f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d49999d6e2625000",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "STAR/GM3.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a433a2085e564faf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "STAR/GM3.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cfa9f8c60e29218d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "97cdcf5ac943ed4d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "STAR/GM3.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2a616f718732a642",
+  "lastOpenFiles": [
+    "STAR/Important facts.md",
+    "STAR/Namespace.md",
+    "STAR/SIL.md",
+    "STAR/Notes KICAD.md",
+    "EECS16A/eecs_lecture/eecs_lec_13.md",
+    "EECS16A/eecs_lecture/eecs_lec_12.md",
+    "MAFF/Math 53 lec 1013.md",
+    "MAFF/Math 53 105.md",
+    "Econ1/HIC and LMIC Energy investment.md",
+    "Econ1/econ_basics.md"
+  ]
+}

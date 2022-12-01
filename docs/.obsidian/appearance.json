@@ -1,0 +1,14 @@
+{
+  "baseFontSize": 20,
+  "theme": "moonstone",
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "realistic-highlight",
+    "checkbox",
+    "notation-colour-blocks",
+    "inline-block-embeds",
+    "clutter-free-headings",
+    "clutter-free-formatting",
+    "center-images"
+  ]
+}

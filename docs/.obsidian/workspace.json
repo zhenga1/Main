@@ -1,0 +1,168 @@
+{
+  "main": {
+    "id": "986f3a2ae0af1f27",
+    "type": "split",
+    "children": [
+      {
+        "id": "02f353f5be14893f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d45d6d9b9ddd212b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HOMES/Home 1129.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ce2e4f4ff5a46104",
+    "type": "split",
+    "children": [
+      {
+        "id": "4323617a9755f742",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c609e9f4e86c374",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7522a0e85ccf0645",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "general inner ",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "423aa5103b1a55e8",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 282.5007801055908
+  },
+  "right": {
+    "id": "76421f41100ceaad",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1f8c587af2a1d7f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d49999d6e2625000",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HOMES/Home 1129.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a433a2085e564faf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HOMES/Home 1129.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cfa9f8c60e29218d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "97cdcf5ac943ed4d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HOMES/Home 1129.md"
+              }
+            }
+          },
+          {
+            "id": "557f0d451ebde0ab",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "65919c7d5616f938",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "active": "d45d6d9b9ddd212b",
+  "lastOpenFiles": [
+    "EECS16A/APS Lab.md",
+    "EECS16A/eecs_basics.md",
+    "EECS16A/hard_problems/Least Squares problem.md",
+    "EECS16A/eecs_change_basis.md",
+    "HOMES/Home 1129.md",
+    "EECS16A/eecs_discussion/eecs_disc_1130.md",
+    "EECS16A/eecs_discussion/eecs_disc_1128.md",
+    "EECS16A/eecs_touch3b.md",
+    "EECS16A/eecs-img3-notes.md",
+    "EECS16A/eecs_lecture/Untitled.md"
+  ]
+}

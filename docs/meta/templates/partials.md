@@ -1,0 +1,1 @@
+\frac{\partial y}{\partial x}

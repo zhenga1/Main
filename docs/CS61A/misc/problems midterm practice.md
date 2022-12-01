@@ -1,0 +1,2 @@
+5. (7 points) Do You Yield? 
+(a) (6 pt) Implement partitions, which is a generator function that takes positive integers n and m. It yields strings describing all partitions of n using parts up to size m. Each partition is a sum of non-increasing positive integers less than or equal to m that totals n. The partitions function yields a string for each partition exactly once. You may not use lambda, if, and, or, lists, tuples, or dictionaries in your solution (other than what already appears in the template).
