@@ -1,7 +1,8 @@
-site_name: obsidian-mkdocs template
+site_name: Aaron's Virtual Brain
 
 theme:
     name: 'material'
+    nav_style: 'dark'
     palette:
 
     # Light mode
