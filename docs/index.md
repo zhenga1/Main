@@ -1,11 +1,9 @@
-# Obsidian Notes
+# Aaron's Website
+Welcome to Aaron's website 
 
-Publish your public notes with MkDocs
+In this website, you will have exclusive access to Aaron's many notes(most of them for studying). You will also learn about Aaron's current life and what makes him unique, as well as what makes him so cool and amazing. 
 
-## Hello World!
+## Hello and Welcome! 
 
-The `index.md` in the `/docs` folder is the homepage you see here.
+***Please note that  this website is still very much work in progress.***
 
-The folders in `/docs` appear as the main sections on the navigation bar.
-
-The notes appear as pages within these sections. For example, [[Note 1]] in `Topic 1`
