@@ -1,0 +1,1807 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<title>Math 53 linearization - Aaron's Virtual Brain</title>
+<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Aaron's Virtual Brain" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Aaron's Virtual Brain">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Aaron's Virtual Brain
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Math 53 linearization
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Aaron's Virtual Brain" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Aaron's Virtual Brain">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Aaron's Virtual Brain
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Aaron's Website
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          ANTLR4
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ANTLR4" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          ANTLR4
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ANTLR4/Notes%201/">
+        Notes 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ANTLR4/VSCODE%20Extension%20readme/">
+        Welcome to your VS Code Extension
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Astro
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Astro" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Astro
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Astro/notes/">
+        Notes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          C++
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="C++" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../C%2B%2B/Namespace/">
+        Namespace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../C%2B%2B/auto/">
+        Auto
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          CS61A
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CS61A" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          CS61A
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/Untitled%201/">
+        Untitled 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/cs_hmwk_notes/">
+        Cs hmwk notes
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3">
+          Disc
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Disc" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Disc
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/CS_disc_926/">
+        CS disc 926
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_921/">
+        Cs 921
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_1/">
+        Cs disc 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_1012/">
+        Cs disc 1012
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_1017/">
+        Cs disc 1017
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_1019/">
+        Cs disc 1019
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_103/">
+        Cs disc 103
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_105/">
+        Cs disc 105
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_1102/">
+        Cs disc 1102
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_1109/">
+        Cs disc 1109
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_2/">
+        Cs disc 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/disc/cs_disc_928/">
+        Cs disc 928
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4">
+          Lec
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Lec" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+          Lec
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/Cs_lec_7/">
+        Cs lec 7
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_intro/">
+        Cs intro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_1/">
+        Cs lec 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_10/">
+        Cs lec 10
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_11/">
+        Cs lec 11
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_12/">
+        Cs lec 12
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_13/">
+        Cs lec 13
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_14/">
+        Cs lec 14
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_15/">
+        Cs lec 15
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_16/">
+        Cs lec 16
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_17/">
+        Cs lec 17
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_18/">
+        Cs lec 18
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_19/">
+        Cs lec 19
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_2/">
+        Cs lec 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_20/">
+        Interpreter
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_21/">
+        Database Management Systems
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_22/">
+        Joining Two Tablees
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_23/">
+        Create Table
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_24/">
+        Aggregation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_3/">
+        Cs lec 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_4/">
+        Cs lec 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_5/">
+        Cs lec 5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_6/">
+        Cs lec 6
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_8/">
+        Cs lec 8
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/lec/cs_lec_9/">
+        Cs lec 9
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" id="__nav_5_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_5">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Misc" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_5">
+<span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Problems%20i%20struggled%20w/">
+        Problems i struggled w
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Quasiquotation/">
+        Quasiquotation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Representation/">
+        Representation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Scheme%20Doc/">
+        Scheme Doc
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Scheme%20syntax/">
+        Scheme syntax
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Sequences/">
+        Sequences
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Special%20Forms/">
+        Special Forms
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/TREES/">
+        Trees
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Untitled/">
+        Untitled
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/Useless_sql/">
+        Useless sql
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/problems%20midterm%20practice/">
+        Problems midterm practice
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/recursion%20framework/">
+        Recursion framework
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/retarded%20error/">
+        Scheme
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/slicing/">
+        Slicing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/tree_representation/">
+        Tree representation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS61A/misc/useless%20scheme/">
+        Useless scheme
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          CS70
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CS70" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          CS70
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS70/cs70_1/">
+        Cs70 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS70/cs70_2/">
+        Cs70 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CS70/cs_70_def/">
+        Cs 70 def
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          EECS16A
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="EECS16A" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          EECS16A
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/APS%20Lab/">
+        APS Lab
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/Correlation%20and%20Trilateration%20Notes/">
+        Correlation and Trilateration Notes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/EECS_circuits/">
+        EECS circuits
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/Least%20Squares/">
+        Least Squares
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/Null-Column%20Space/">
+        Null Column Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/a_eecs_intro/">
+        ELECTRICAL ENGINEERING AND COMPUTER SCIENCE SO DOMINANT LOL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs%20circuit/">
+        Eecs circuit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs-img3-notes/">
+        Eecs img3 notes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs-invertibility/">
+        Inverting a matrix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_basics/">
+        Eecs basics
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_change_basis/">
+        Eecs change basis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_column_space/">
+        Eecs column space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_eigenvalues/">
+        Eecs eigenvalues
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_img2_prereading/">
+        Eecs img2 prereading
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_touch3b/">
+        Eecs touch3b
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eigenvalue_linear%20independence/">
+        Eigenvalue linear independence
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/svd/">
+        Svd
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_18" id="__nav_7_18" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_18">
+          Eecs discussion
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Eecs discussion" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_18">
+<span class="md-nav__icon md-icon"></span>
+          Eecs discussion
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1/">
+        Eecs disc 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1012/">
+        Eecs disc 1012
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1019/">
+        Eecs disc 1019
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1024/">
+        Eecs disc 1024
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1026/">
+        Eecs disc 1026
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1031/">
+        Eecs disc 1031
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_105/">
+        Eecs disc 105
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1102/">
+        Eecs disc 1102
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1107/">
+        Eecs disc 1107
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1109/">
+        Eecs disc 1109
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1116/">
+        Eecs disc 1116
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1128/">
+        **Discussion 14A**
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_1130/">
+        Eecs disc 1130
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_2/">
+        Eecs disc 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_3/">
+        Eecs disc 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_4/">
+        Eecs disc 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_disc_928/">
+        Eecs disc 928
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_discussion/eecs_hmwk_notes/">
+        Eecs hmwk notes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_19" id="__nav_7_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19">
+          Eecs lecture
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Eecs lecture" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_19">
+<span class="md-nav__icon md-icon"></span>
+          Eecs lecture
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/Untitled/">
+        Untitled
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_1/">
+        Eecs lec 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_10/">
+        Eecs lec 10
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_11/">
+        Eecs lec 11
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_12/">
+        Eecs lec 12
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_13/">
+        Eecs lec 13
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_14/">
+        Eecs lec 14
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_15/">
+        Eecs lec 15
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_16/">
+        Eecs lec 16
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_17/">
+        Eecs lec 17
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_18/">
+        Eecs lec 18
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_19/">
+        Op- Amp in Negative feedback
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_2/">
+        Eecs lec 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_20/">
+        Eecs lec 20
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_21/">
+        Eecs lec 21
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_22/">
+        Eecs lec 22
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_23/">
+        Towards the Least Squares Algorithm
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_24/">
+        Eecs lec 24
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_3/">
+        Eecs lec 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_4/">
+        Eecs lec 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_5/">
+        Eecs lec 5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_6/">
+        Eecs lec 6
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_7/">
+        Eecs lec 7
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_8/">
+        Eecs lec 8
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/eecs_lecture/eecs_lec_9/">
+        Eecs lec 9
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_20" id="__nav_7_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_20">
+          Hard problems
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Hard problems" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_20">
+<span class="md-nav__icon md-icon"></span>
+          Hard problems
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../EECS16A/hard_problems/Least%20Squares%20problem/">
+        Least Squares problem
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          Econ1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Econ1" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Econ1
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/Concepts_disc_1011/">
+        Concepts disc 1011
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/DEMAND/">
+        DEMAND
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/Definitions/">
+        Definitions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/Economics%20notes/">
+        Economics notes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/Food%20bank%20America/">
+        Food bank America
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/HIC%20and%20LMIC%20Energy%20investment/">
+        HIC and LMIC Energy investment
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/How%20the%20FED%20sets%20interest%20rates/">
+        How the FED sets interest rates
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/Wages%20allocation/">
+        Wages allocation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/comp_adv_intnl_trade/">
+        Comp adv intnl trade
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_basics/">
+        Econ basics
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_disc_104/">
+        Econ disc 104
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_disc_106/">
+        Econ disc 106
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_disc_1101/">
+        Econ disc 1101
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_disc_1110/">
+        Econ disc 1110
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_disc_922/">
+        Econ disc 922
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_disc_927/">
+        Econ disc 927
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_disc_exam_prep/">
+        Econ disc exam prep
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_10/">
+        Econ lec 10
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_11/">
+        Econ lec 11
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_12/">
+        Econ lec 12
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_13/">
+        **Business Cycle**
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_14/">
+        Business Cycles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_15/">
+        Econ lec 15
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_16/">
+        Sources of Inflation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_17/">
+        Has the Fed succceeded in hitting the Inflation target?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_18/">
+        Econ lec 18
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_19/">
+        Final Exam
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_4/">
+        Econ lec 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_5/">
+        Econ lec 5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_6_climate_guest/">
+        Econ lec 6 climate guest
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_7/">
+        Econ lec 7
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_8/">
+        Econ lec 8
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/econ_lec_9/">
+        Econ lec 9
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/externalities/">
+        Externalities
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Econ1/meme/">
+        Meme
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9">
+          Excalidraw
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Excalidraw" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Excalidraw
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Excalidraw/Drawing%202022-10-29%2001.02.49.excalidraw/">
+        Drawing 2022 10 29 01.02.49.excalidraw
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Excalidraw/Drawing%202022-10-29%2001.03.04.excalidraw/">
+        Drawing 2022 10 29 01.03.04.excalidraw
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10">
+          HOMES
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="HOMES" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          HOMES
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HOMES/Default%20opening/">
+        Default opening
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HOMES/Home%20-%201128/">
+        Home   1128
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HOMES/Home%201129/">
+        Home 1129
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HOMES/Home%201130/">
+        Home 1130
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HOMES/IDENTITY/">
+        IDENTITY
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          JIPCAD
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="JIPCAD" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          JIPCAD
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Cool_implicit_surfaces/">
+        Banchoff-Chmutov surfaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Crystal/">
+        Crystal
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Documentation%20official%20for%20the%20Creation%20of%20the%20VSCODE%20Extension/">
+        Version 0.0
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Frenet/">
+        Frenet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%201/">
+        JIPCAD 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%2010/">
+        JIPCAD 10
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%202/">
+        JIPCAD 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%203/">
+        JIPCAD 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%204/">
+        JIPCAD 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%205/">
+        JIPCAD 5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%206/">
+        JIPCAD 6
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%207/">
+        JIPCAD 7
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%208/">
+        JIPCAD 8
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/JIPCAD%209/">
+        JIPCAD 9
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/NOME%20Extension%20notes/">
+        NOME Extension notes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Nome%20Language/">
+        Nome Language
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Pacman/">
+        Pacman
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Reading_NOME_code/">
+        Reading NOME code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Regex/">
+        Regex
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Regexr%20Limitations/">
+        Regexr Limitations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Solar%20system/">
+        Solar system
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Untitled/">
+        Untitled
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/how%20generate_implicit_surface%20works/">
+        How generate implicit surface works
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/wheels_file_problems/">
+        Wheels file problems
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_25" id="__nav_11_25" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_25">
+          Extension program
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Extension program" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_25">
+<span class="md-nav__icon md-icon"></span>
+          Extension program
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Extension_program/Abstract%20Syntax%20Tree/">
+        Abstract Syntax Tree
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Extension_program/Antlr4/">
+        Antlr4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Extension_program/Coding%20of%20the%20Extension/">
+        Coding of the Extension
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Extension_program/Language%20highlighting/">
+        Language highlighting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_26" id="__nav_11_26" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_26">
+          Release Extension Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Release Extension Notes" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_26">
+<span class="md-nav__icon md-icon"></span>
+          Release Extension Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Release%20Extension%20Notes/LICENSE/">
+        LICENSE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JIPCAD/Release%20Extension%20Notes/NOME3%20Language%20Extension%20README/">
+        NOME3 Language Extension README
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12">
+          MAFF
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MAFF" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          MAFF
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ch%2016/">
+        Ch 16
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2014%20-%20Lagrange%20Multipliers/">
+        Chapter 14   Lagrange Multipliers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2015%20-%20Multiple%20integrals/">
+        Chapter 15   Multiple integrals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2016%20-%20Vector%20Fields/">
+        Chapter 16   Vector Fields
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Cool%20math%20theorems/">
+        Cool math theorems
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%2053%20105/">
+        Math 53 105
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%2053%20927/">
+        Math 53 927
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%2053%20Ch%2011/">
+        Math 53 Ch 11
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%2053%20Ch%2015/">
+        Math 53 Ch 15
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%2053%20disc%201102/">
+        Math 53 disc 1102
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%2053%20lec%20106/">
+        Math 53 lec 106
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%2053%20midterm%20review/">
+        Math 53 midterm review
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%2053/">
+        Math 53
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%20notes/">
+        Math notes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math%20study%20notes/">
+        Math study notes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Math_53_triple_int/">
+        Math 53 triple int
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Notetaking%20Chapter%2016/">
+        Notetaking Chapter 16
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../OH_philip/">
+        OH philip
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Math 53 linearization
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_20" id="__nav_12_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12_20">
+          Discussion
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Discussion" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_12_20">
+<span class="md-nav__icon md-icon"></span>
+          Discussion
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%201019/">
+        Math 53 disc 1019
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%201021/">
+        Math 53 disc 1021
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%201024/">
+        Math 53 disc 1024
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%201028/">
+        Math 53 disc 1028
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%20103/">
+        Lagrange Multipliers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%20107/">
+        Math 53 disc 107
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%201107/">
+        Math 53 disc 1107
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%201120/">
+        Math 53 disc 1120
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/Math%2053%20disc%20923/">
+        Math 53 disc 923
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/math%2053%20disc%20926/">
+        Math 53 disc 926
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" id="__nav_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_13">
+          Opportunites
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Opportunites" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+          Opportunites
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Opportunites/COOL%20CLASSES/">
+        COOL CLASSES
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Opportunites/Coming%20up/">
+        Coming up
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Opportunites/FUTURE/">
+        FUTURE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Opportunites/Hackathon/">
+        Hackathon
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" id="__nav_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_14">
+          STAR
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="STAR" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+          STAR
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/Action%20items/">
+        Action items
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/GM2/">
+        GM2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/GM3/">
+        GM3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/GM4/">
+        GM4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/Important%20facts/">
+        Important facts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/LE2%20board%20enclosure%20building/">
+        LE2 board enclosure building
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/Measurements/">
+        Measurements
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/Namespace/">
+        Namespace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/Notes%20KICAD/">
+        Notes KICAD
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../STAR/SIL/">
+        SIL
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15">
+          Topic 1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Topic 1" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+          Topic 1
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%201/">
+        Note 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%202/">
+        Note 2
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_16">
+          Meta
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Meta" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_16">
+<span class="md-nav__icon md-icon"></span>
+          Meta
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16_1" id="__nav_16_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_16_1">
+          Templates
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Templates" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_16_1">
+<span class="md-nav__icon md-icon"></span>
+          Templates
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meta/templates/Done%20Status/">
+        Done Status
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meta/templates/To%20Do%20List%20Template/">
+        To Do List Template
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meta/templates/discussion_template/">
+        Discussion template
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meta/templates/lecture_template/">
+        Lecture template
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meta/templates/matrix/">
+        Matrix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meta/templates/not%20done%20status/">
+        Not done status
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meta/templates/partials/">
+        Partials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Math 53 linearization</h1>
+<p><span class="arithmatex">\(W = f(x,y,z)\)</span>
+Tangent hyperplane at <span class="arithmatex">\((x_0,y_0,z_0,f(x_0,y_0,z_0))\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(W - f(x_0,y_0,z_0)=\frac{\partial f}{\partial x} (x-x_0) +\frac{\partial f}{\partial y} (y-y_0) + \frac{\partial f}{\partial z}(z-z_0)\)</span>\)</span> Where<span class="arithmatex">\(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\)</span> are evaluated at point <span class="arithmatex">\((x_0,y_0,z_0)\)</span>.</p>
+<p>Linearization is basically solving for <span class="arithmatex">\(W\)</span>, in this case:
+<span class="arithmatex">\(<span class="arithmatex">\(W = f(x_0,y_0,z_0)+\frac{\partial f}{\partial x} (x-x_0) +\frac{\partial f}{\partial y} (y-y_0) + \frac{\partial f}{\partial z}(z-z_0)\)</span>\)</span></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: OH philip" class="md-footer__link md-footer__link--prev" href="../OH_philip/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              OH philip
+            </div>
+</div>
+</a>
+<a aria-label="Next: Math 53 disc 1019" class="md-footer__link md-footer__link--next" href="../discussion/Math%2053%20disc%201019/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Math 53 disc 1019
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
