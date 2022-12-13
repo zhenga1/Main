@@ -32,11 +32,11 @@ markdown_extensions:
   # - pymdownx.superfences
   # - pymdownx.details
   # - pymdownx.magiclink
-  - mdx_math:
-      enable_dollar_delimiter: true
-  - fenced_code
-  - codehilite
-  - footnotes
+  # - mdx_math:
+  #     enable_dollar_delimiter: true
+  # - fenced_code
+  # - codehilite
+  # - footnotes
   - pymdownx.tasklist:
       custom_checkbox: true
   - def_list
