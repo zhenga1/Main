@@ -11,12 +11,12 @@ Statements:
 - Later on, we'll run into some expressions that look similar to statemnets
 
 Control Minilecture
-if <condition>:
-	<body of code>
-Check <condition> -> if expression evaluates to True, execute code inside!
+if condition:
+	body of code
+Check condition -> if expression evaluates to True, execute code inside!
 
-check <condition> ONLY IF previous if statement's condition was False!
-elif -> else if <cond>
+check condition ONLY IF previous if statement's condition was False!
+elif -> else if cond
 
 We reach the else if all the previous conditions evaluated to False
 

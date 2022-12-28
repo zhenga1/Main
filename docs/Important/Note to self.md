@@ -1,0 +1,1 @@
+F7 is the trackpad disable key. 

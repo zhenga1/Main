@@ -4,6 +4,7 @@ Calling every function always
 - creates a new frame
 - Binds formal parameters (f&x) to arguments
 - Execute the body:
+
 ```Python
 	return f(f(x))
 ```
@@ -30,9 +31,11 @@ Scope = all the stuff that you can refer to
 HOw to draw an environment diagram:
 When a function is defined:
 - Create a function value: 
+
 ```html
 func <name>(<formal parameters>) [parent = <label>]
 ```
+
 Is parent is the current frame
 	f1: make_ader 		func(adder)
 
@@ -47,6 +50,7 @@ add(list1, list2)
 # adding two lists, basically extending/equivalent to list1.extend(list2)
 ```
 
+
 ```Python
 mul(list,number) #adding list number times.
 ```
@@ -59,6 +63,7 @@ $a<b<c<d<e$ evaluates:
 2) whether $b<c$
 3) whether $c<d$
 4) whether $d<e$
+
 ```Python
 def skip_mul(n):
     if n == 2:

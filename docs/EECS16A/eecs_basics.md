@@ -23,4 +23,12 @@ Prof. Satish Rao
 **LMAO**: You can literally get 87.5% by submitting the homework after the answers are released and yet some idiots still cheat on the homework.
 
 
+**Inverse of a matrix**: 
+If we have a matrix of the form:
+$$A = \begin{bmatrix}a&&b\\c&&d\end{bmatrix}$$
+Then we know that the inverse of this matrix:
+$$A^{-1}=\frac{1}{ad-bc} \times \begin{bmatrix}d&&-b\\-c && a\end{bmatrix}$$
 
+Matrix multiplication is not always **commutative**
+Example:
+- When some matrixes have **zero determinant**, then matrix multiplication is always **non-commutative**

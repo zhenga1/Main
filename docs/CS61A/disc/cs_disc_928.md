@@ -17,6 +17,6 @@ max_product([10,3,1,9,2])
 ```
 
 [[Sequences]]
-[[TREES]]
+[[CS61A/misc/TREES]]
 [[tree_representation]]
 

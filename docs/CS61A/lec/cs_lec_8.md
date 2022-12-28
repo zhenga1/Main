@@ -1,5 +1,6 @@
 **Mutability**
 Recursion:
+
 ```jupyter
 def fact(n):
 	if n==0:
@@ -16,11 +17,13 @@ def fact_times(n,k):
 		return fact_times(n-1,k*n)
 fact_times(5,10)
 ```
+
 ***Recursion. Essentially two options:***
 1) Compute the (product, result, whatever) while using recursion
 2) Compute the (product, result, whatever) after the recursion is complete(i.e, after the base case is reached)
 	1) More challenging
 	2) This case is kinda like one  of the homework problem
+
 ```jupyter
 def print_sums(t,path_sum):
 	#ATTEMPT AT IMPLEMENTATION
@@ -40,7 +43,9 @@ def print_sums(t,path_sum):
 print_sums(tree(3,[tree(4),tree(5,[tree(6)])]),0)
 ```
 
+
 **Count Paths that have a Total Label Sum**
+
 ```jupyter
 from trees import *
 def count_paths(t,total):
@@ -53,20 +58,28 @@ def count_paths(t,total):
 	
 ```
 
+
 **MUTABILITY**
+
 ```jupyter
 from datetime import date
 today = date(2022,9,28)
 freedom = date(2022,12,14)
 str(freedom-today)
 ```
+
+
 ```jupyter
 freedom-today
 ```
+
+
 ```jupyter
 lis = [today.year,today.month,today.day,today.strftime('%A, %B %d')]
 lis
 ```
+
+
 ```jupyter
 x = type(today)
 x

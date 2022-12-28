@@ -5,6 +5,7 @@ Careful: None is not displayed by the interpreter as the value of an expression
 
 None is not displayed by the interpreter as the value of an expression (only value to do so) look at line 3
 Functions end at return statement
+
 ```Python
 return  #is the same as 
 return None.
@@ -26,6 +27,7 @@ Multple environments:
 - Sequence of frames which show bindigns of names and values
 
 Def statement:
+
 ```Python
 def square(x):
 	return mul(x,x)
@@ -79,6 +81,7 @@ Square(square(3)) -> func square(x)
 In this case, there is only two frames, specifically the local and then the global frame.
 
 NAMES HAVE DIFFERENT MEANINGS
+
 ```Python
 def square(square):
 	return mul((->two)square,square)

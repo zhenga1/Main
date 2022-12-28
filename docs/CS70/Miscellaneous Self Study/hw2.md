@@ -1,0 +1,1 @@
+Suppose that there are 2n + 1 airports, where n is a positive integer. The distances between any two airports are all different. For each airport, exactly one airplane departs from it and is destined for the closest airport. Prove by induction that there is an airport which has no airplanes destined for it.

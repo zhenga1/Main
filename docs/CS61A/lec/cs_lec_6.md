@@ -5,15 +5,18 @@ Limitations on dictionaries
 The first restriction is tied to Python's underlying implementation of dictionaries
 The second restriction is tied to the nature of keys. 
 Dictionary comprehensions:
+
 ```html
 {<key exp>: <value exp> for <name> in <iter expression> if <filter exp>}
 Short version: {<key exp>:<value exp> for <name> in <iter expression> }
 ```
 
+
 ![[Zoom_Ao7cbuRKCG.png]]
 
 **Example: Indexing**
 P: Implement index, takes a sequence of *keys*, a sequence of *values* and two argument *match* function. It returns dictionary from *keys* to lists in which the list for a key k contains all *values v* for which *match(k,v)* is a true value.
+
 ```jupyter
 def index(keys,values,match):
 	>>>index[[7,9,11],range(30,50),lambda k,v:v%k==0)]
@@ -37,6 +40,7 @@ def index(keys,values,match):
 	- Constructor: rational(n,d)
 
 ***Rational number arithmetic implementation***
+
 ```jupyter
 def mul_rational(x,y):
 	return rational(numer(x)*numer(y),
@@ -50,7 +54,9 @@ def print_rational(x):
 def rationals_are_equal(x,y):
 	return numer(x)*denom(y) == numer(y)*denom(x)
 ```
+
 *Simplest possible definiton of rational and other functions*
+
 ```jupyter 
 def rational(x,y):
 	return [x,y]
@@ -59,9 +65,11 @@ def numer(r):
 def denom(r):
 	return r[1]
 ```
+
 Above code works, however have not yet computed in *lowest terms*
 
 FIX: New definition of *rational(x,y)*
+
 ```jupyter
 from math import gcd
 def rational(x,y):
@@ -77,6 +85,7 @@ class('type')
 ```
 
 
+
 ![[chrome_fH42C9kviA.png]]
 
 **What are Data, how to abstract data?**
@@ -87,6 +96,7 @@ class('type')
 	- One can recognise data abstraction by its behaviour
 	
 *New way to implement rational:*
+
 ```jupyter
 def rational(n,d):
 	def select(name):

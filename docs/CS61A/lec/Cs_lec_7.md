@@ -14,6 +14,7 @@ There are two repeatedly used definitions of trees:
 **Implementing the tree abstraction:**
 ![[chrome_i3Melqbx2F.png]]
 So the tree can be implemented however it is fit
+
 ```jupyter
 #Example implementation
 def tree(label, branches=[]):
@@ -29,21 +30,26 @@ def tree(label, branches=[]):
 		return [label] + list(branches)
 treek = tree('mytree',[tree(3)])
 ```
+
 All branches of any *tree* must be a *tree*
+
 ```Python
 def is_leaf(tree):
 	return not branches(tree)
 ```
+
 ![[chrome_WJhOkZyTrB.png]]
 
 Trees:
 - (**ROOT LABEL**) + **A list of branches**
 
 Can implement *tree as a list*:
+
 ```HTML
 tree = [labels, list<branches> = []]
 <!--So basically a tree has a branches variable, that when not initialised, default to [] value-->
 ```
+
 
 ```jupyter
 def fib_tree(n):
@@ -58,6 +64,7 @@ def count_leaves(t):
 	else:
 		return sum([count_leaves(b) for b in branches(t)])
 ```
+
 Sum a list of lists -> You get one list with all the elemnts in all the lists.
 
 ```jupyter

@@ -94,7 +94,7 @@ def overlab(a,b):
 				count+=1
 	return count
 ```
-overlap([2,3,5,2],[4,3,5,2]) is a function with O(4^2)
+`overlap([2,3,5,2],[4,3,5,2])`  is a function with `O(4^2)`
 
 So time taken $T$ is related to $n$ by:
 $T = an^2 + bn+c$,where $a$ is a nonzero constant

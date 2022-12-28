@@ -7,17 +7,19 @@ Initial Release of the **Visual Studio Code** NOME language extension.
 
 # Features
 1. **Autocompletion of commands** 
-<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/images/autocompletion.gif">
+<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/.github/images/autocompletion.gif">
 
 2. **Syntax coloring**
-<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/images/syntax_highlight.png">
+<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/.github/images/syntax_highlight.png">
 
 3. **Commenting**
-<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/images/toggle_block_comment.gif">
+<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/.github/images/toggle_block_comment.gif">
+
 4. **Running of Nome Executable**
-<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/images/run_nome.gif">
+<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/.github/images/run_nome.gif">
+
 5. **Customize directory of NOME executable**
-<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/images/remote_running.gif">
+<img src="https://raw.githubusercontent.com/JIPCAD/JIPCAD-vs-code/master/.github/images/remote_running.gif">
 
 # Intended Updates/Improvements
 1) **Semantic highlighting**
